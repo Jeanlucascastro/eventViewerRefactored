@@ -22,14 +22,14 @@ public class EventService {
 	//return next events including current day events
 	public List<Event> findAll(){
 		Date date = new Date(System.currentTimeMillis());
-		return repo.findBydateEventGreaterThanEqual(date);
+		return repo.findByDateEventGreaterThanEqual(date);
 	}
 	
 	
 	// return next events after the current date
 	public List<Event> FindToday(){
 		Date date = new Date(System.currentTimeMillis());
-		return repo.findBydateEventAfter(date);
+		return repo.findByDateEventGreaterThanEqual(date);
 	}
 	
 //	public List<Event> findByTitle(String text){
@@ -54,8 +54,8 @@ public class EventService {
 				objDTO.getDateEvent(), 
 				objDTO.getDescription(),
 				objDTO.getLocation(), 
-				objDTO.getHowToSee(),
-				objDTO.getComment());
+				objDTO.getHowToSee());
+//				objDTO.getComment());
 	}
 	
 	public void delete(String id) {

@@ -32,8 +32,8 @@ public class Event implements Serializable {
 	@Getter @Setter private String location;
 	@Getter @Setter private String howToSee;
 
-	@DBRef
-	@Getter @Setter private List<Comment> comments = new ArrayList<>();
+//	@DBRef
+//	@Getter @Setter private List<Comment> comments = new ArrayList<>();
 
 
 
@@ -44,14 +44,14 @@ public class Event implements Serializable {
 	public Event() {
 	}
 
-	public Event(String id, String nameEvent, Date dateEvent, String description, String location, String howToSee, List<Comment> comments) {
+	public Event(String id, String nameEvent, Date dateEvent, String description, String location, String howToSee) {
 		this.id = id;
 		this.nameEvent = nameEvent;
 		this.dateEvent = dateEvent;
 		this.description = description;
 		this.location = location;
 		this.howToSee = howToSee;
-		this.comments = comments;
+//		this.comments = comments;
 	}
 
 	@Override

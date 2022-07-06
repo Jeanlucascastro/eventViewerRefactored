@@ -24,7 +24,7 @@ public class EventDTO implements Serializable {
 	@Getter @Setter private String location;
 	@Getter @Setter private String howToSee;
 	
-	@Getter @Setter private List<Comment> comments = new ArrayList<>();
+//	@Getter @Setter private List<Comment> comments = new ArrayList<>();
 	
 	public EventDTO() {
 		
@@ -37,12 +37,12 @@ public class EventDTO implements Serializable {
 		description = obj.getDescription();
 		location = obj.getLocation();
 		howToSee = obj.getHowToSee();
-		comments = obj.getComments();
+//		comments = obj.getComments();
 		
 	}
 
 
-	public List<Comment> getComment() {
-		return getComments();
-	}
+//	public List<Comment> getComment() {
+//		return getComments();
+//	}
 }
