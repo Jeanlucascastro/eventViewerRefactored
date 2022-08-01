@@ -2,6 +2,7 @@ package com.gedal.eventviewer.repository;
 
 
 
+import java.time.Instant;
 import java.util.Date;
 import java.util.List;
 
@@ -15,7 +16,7 @@ public interface EventRepository extends MongoRepository<Event, String> {
 	
 //	List<Event> findByTitleContaining(String text);
 	List<Event> findBydateEventAfter(Date date);
-	List<Event> findByDateEventGreaterThanEqual(Date dateEvent);
+	List<Event> findByDateEventGreaterThanEqual(Instant dateEvent);
 	
 	
 }

@@ -1,6 +1,7 @@
 package com.gedal.eventviewer.resources;
 
 import java.net.URI;
+import java.time.Instant;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -26,6 +27,7 @@ public class EventResource {
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public ResponseEntity<List<EventDTO>> findAll() {
+
 		List<Event> list = service.findAll();
 		List<EventDTO> listDto = list.stream().map(x -> new EventDTO(x)).collect(Collectors.toList());
 		return ResponseEntity.ok().body(listDto);

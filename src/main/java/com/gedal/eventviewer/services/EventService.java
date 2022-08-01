@@ -1,16 +1,16 @@
 package com.gedal.eventviewer.services;
 
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.gedal.eventviewer.domain.Event;
 import com.gedal.eventviewer.dto.EventDTO;
 import com.gedal.eventviewer.repository.EventRepository;
 import com.gedal.eventviewer.services.exception.ObjectNotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.time.Instant;
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EventService {
@@ -21,15 +21,15 @@ public class EventService {
 	
 	//return next events including current day events
 	public List<Event> findAll(){
-		Date date = new Date(System.currentTimeMillis());
-		return repo.findByDateEventGreaterThanEqual(date);
+		Instant today = Instant.now();
+		return repo.findByDateEventGreaterThanEqual(today);
 	}
 	
 	
 	// return next events after the current date
 	public List<Event> FindToday(){
-		Date date = new Date(System.currentTimeMillis());
-		return repo.findByDateEventGreaterThanEqual(date);
+		Instant today = Instant.now();
+		return repo.findByDateEventGreaterThanEqual(today);
 	}
 	
 //	public List<Event> findByTitle(String text){
