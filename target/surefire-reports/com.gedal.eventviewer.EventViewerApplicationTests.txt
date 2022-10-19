@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.gedal.eventviewer.EventViewerApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.505 s - in com.gedal.eventviewer.EventViewerApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.847 s - in com.gedal.eventviewer.EventViewerApplicationTests

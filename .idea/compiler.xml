@@ -8,12 +8,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eventViewer" />
+        <module name="eventViewerRefac" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eventViewer" options="-parameters" />
+      <module name="eventViewerRefac" options="-parameters" />
     </option>
   </component>
 </project>
